@@ -2,9 +2,11 @@
 const nextConfig = {
   experimental: {
     serverActions: true,
-    serverComponentsExternalPackages: ["mongoose"],
+    serverComponentsExternalPackages: ['mongoose']
   },
   images: {
-    domains: ["m.media-amazon.com"],
-  },
-};
+    domains: ['m.media-amazon.com']
+  }
+}
+
+module.exports = nextConfig
