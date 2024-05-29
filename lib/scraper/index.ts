@@ -20,6 +20,9 @@ export async function scrapeAmazonProduct(url: string){
         host: `brd.superproxy.io`,
         port,
         rejectUnauthorized: false,
+        headers: {
+            'Cache-Control': 'no-store'
+        }
         }
 
         try {
