@@ -50,7 +50,7 @@ export async function getProductById(productId: string){
     try {
         connectToDB();
         const product = await Product.findOne({_id: productId})
-        await console.log("fetched product", product);
+        // await console.log("fetched product", product);
         if(!product) return null;
 
         return product;
@@ -63,7 +63,7 @@ export async function getAllProducts(){
     try {
         connectToDB();
         const products = await Product.find({});
-
+        console.log("fetched products", products);
         return products;
     } catch (error: any) {
         console.log(error);
