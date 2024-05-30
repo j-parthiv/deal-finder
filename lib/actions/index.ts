@@ -64,6 +64,7 @@ export async function getAllProducts(){
         connectToDB();
         const products = await Product.find({});
         console.log("fetched products", products);
+        revalidatePath(`/`);
         return products;
     } catch (error: any) {
         console.log(error);
